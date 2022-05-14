@@ -4,7 +4,9 @@ The model uses 3 air quality measurements (ozone, pm10, no2) as well as cases fr
 Data used was from 3/3/20 to 5/12/22.
 COVID case data was downloaded from the New York Times COVID dataset (https://github.com/nytimes/covid-19-data)
 Air quality case data was downloaded from the World Air Quality Index (https://aqicn.org/data-platform/covid19/)
-If you would like to use more recent data, download both datasets and use the DataImporter to update the data.
+If you would like to use more recent data, download both datasets and use DataImporter.py to update the data.
+
+model.py and control.py are the actual ML files
 
 Suggestions:
 - Use cases from multiple days in the past (I simply did 1 day)
