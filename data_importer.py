@@ -57,7 +57,7 @@ class main():
         main.aq(county_name)
         final_df = main.case_df.join(main.aq_df)
         final_df = final_df[~final_df.index.duplicated(keep="first")]
-        final_df.to_csv(f"{county_name}.csv")
+        final_df.to_csv(f"county_data/{county_name}.csv")
 
-main.main(27123, "Saint Paul")
+main.main()
 
