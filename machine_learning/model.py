@@ -6,6 +6,7 @@ import keras
 from matplotlib import pyplot as plt
 from keras import layers
 from keras.callbacks import LambdaCallback
+from keras.utils.vis_utils import plot_model
 
 class main():
   """Sets shared variables across ML and plotting functions."""
@@ -95,7 +96,16 @@ class main():
     plt.plot(main.model_df["tomcases"])
     plt.legend(["predicted", "acutal"], loc = "upper right")
     plt.savefig(f"diagrams/{main.file}_model_predictions.png")
+  
+  def model_image():
+    """
+    Plot a diagram of the control's architecture. I could not install graphviz on Mac,
+    so I did this part on a Windows computer (which you can do by importing the trained model,
+    and solely running this function).
+    """
+    plot_model(main.model, f"models/{main.file}_model_diagram.png")
 
 main.model_creation()
 main.model_loss_plot()
 main.model_prediction_graph()
+main.model_image()
